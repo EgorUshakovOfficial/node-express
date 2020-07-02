@@ -19,7 +19,7 @@ console.log("Hello World");
 //app.get('/', (req, resp) => resp.sendFile(absolutePath));
 
 /** 4) Serve static assets  */
-let absolutePath = __dirname + '/public';
+let absolutePath = __dirname + 'public';
 app.use(express.static(absolutePath));
 
 
