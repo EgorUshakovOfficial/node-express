@@ -15,15 +15,18 @@ var app = express();
 //app.get('/', (req, resp) => resp.send("Hello Express"));
 
 /** 3) Serve an HTML file */
-let absolutePath = __dirname + '/views/index.html'; 
-app.get('/', (req, resp) => resp.sendFile(absolutePath));
+//let absolutePath = __dirname + '/views/index.html'; 
+//app.get('/', (req, resp) => resp.sendFile(absolutePath));
 
 /** 4) Serve static assets  */
-app.use(express.static(__dirname + '/public'));
+//app.use(express.static(__dirname + '/public'));
 
 
 /** 5) serve JSON on a specific route */
+const url  = 'https://protected-plateau-28296.herokuapp.com/';
+const path = url + '/json';  
 
+app.get(path, (req, resp) => resp.json({ "message": "Hello json" }));
 
 /** 6) Use the .env file to configure the app */
  
