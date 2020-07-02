@@ -20,7 +20,7 @@ console.log("Hello World");
 
 /** 4) Serve static assets  */
 let absolutePath = __dirname + '/public';
-app.use(()=>express.static(absolutePath));
+app.get('/', app.use(()=>express.static(absolutePath)));
 
 
 /** 5) serve JSON on a specific route */
