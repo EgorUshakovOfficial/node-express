@@ -19,7 +19,7 @@ let absolutePath = __dirname + '/views/index.html';
 app.get('/', (req, resp) => resp.sendFile(absolutePath));
 
 /** 4) Serve static assets  */
-app.use(express.static(absolutePath));
+app.use(express.static(__dirname + '/public'));
 
 
 /** 5) serve JSON on a specific route */
