@@ -15,10 +15,12 @@ console.log("Hello World");
 //app.get('/', (req, resp) => resp.send("Hello Express"));
 
 /** 3) Serve an HTML file */
-let absolutePath = __dirname + '/views/index.html'; 
-app.get('/', (req, resp) => resp.sendFile(absolutePath));
+//let absolutePath = __dirname + '/views/index.html'; 
+//app.get('/', (req, resp) => resp.sendFile(absolutePath));
 
 /** 4) Serve static assets  */
+let absolutePath = __dirname + '/public';
+app.use(()=>express.static(absolutePath));
 
 
 /** 5) serve JSON on a specific route */
