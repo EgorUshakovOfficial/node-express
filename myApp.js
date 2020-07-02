@@ -15,7 +15,7 @@ console.log("Hello World");
 //app.get('/', (req, resp) => resp.send("Hello Express"));
 
 /** 3) Serve an HTML file */
-app.get('/', (req, resp) => resp.sendFile('/views/index.html')); 
+app.get('/', (req, resp) => resp.sendFile('views/index.html'));
 
 /** 4) Serve static assets  */
 
