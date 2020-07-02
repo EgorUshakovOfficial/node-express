@@ -23,9 +23,7 @@ var app = express();
 
 
 /** 5) serve JSON on a specific route */
-const url  = 'https://protected-plateau-28296.herokuapp.com/';
-const path = url + 'json';  
-app.get(path, (req, resp) => resp.json({ "message": "Hello json" }));
+app.get('/json', (req, resp) => resp.json({ "message": "Hello json" }));
 
 /** 6) Use the .env file to configure the app */
  
