@@ -26,6 +26,7 @@ var app = express();
 app.get('/json', (req, resp) => resp.json({ "message": "Hello json" }));
 
 /** 6) Use the .env file to configure the app */
+process.env.MESSAGE_STYLE = uppercase; 
  
  
 /** 7) Root-level Middleware - A logger */
