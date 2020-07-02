@@ -19,8 +19,7 @@ console.log("Hello World");
 //app.get('/', (req, resp) => resp.sendFile(absolutePath));
 
 /** 4) Serve static assets  */
-let absolutePath = __dirname + 'public';
-app.use(express.static(absolutePath));
+app.use(express.static(__dirname + '/public'));
 
 
 /** 5) serve JSON on a specific route */
